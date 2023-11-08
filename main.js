@@ -51,14 +51,14 @@ scene.add(floor2);
 
 //add grass texture to floor
 const textureLoadergrass = new TextureLoader();
-const grassTexture = textureLoadergrass.load("grass.jpg");
+const grassTexture = textureLoadergrass.load("./grass.jpg");
 floor.material.map = grassTexture;
 grassTexture.wrapS = THREE.RepeatWrapping;
 grassTexture.wrapT = THREE.RepeatWrapping;
 grassTexture.repeat.set(8, 8);
 
 const textureLoaderparket = new TextureLoader();
-const parketTexture = textureLoaderparket.load("parket.jpg");
+const parketTexture = textureLoaderparket.load("./parket.jpg");
 floor2.material.map = parketTexture;
 parketTexture.wrapS = THREE.RepeatWrapping;
 parketTexture.wrapT = THREE.RepeatWrapping;
@@ -82,13 +82,13 @@ scene.fog = fog;
 
 const mtlLoader = new MTLLoader();
 
-mtlLoader.load("toothless.mtl", (mtl) => {
+mtlLoader.load("./toothless.mtl", (mtl) => {
   mtl.preload();
 
   const objLoader = new OBJLoader();
   objLoader.setMaterials(mtl);
 
-  objLoader.load("toothless.obj", (obj) => {
+  objLoader.load("./toothless.obj", (obj) => {
     const model = obj;
     scene.add(model);
 
@@ -113,13 +113,13 @@ mtlLoader.load("toothless.mtl", (mtl) => {
 
 const mtlLoader2 = new MTLLoader();
 
-mtlLoader2.load("Avent_sport.mtl", (mtl2) => {
+mtlLoader2.load("./Avent_sport.mtl", (mtl2) => {
   mtl2.preload();
 
   const objLoader2 = new OBJLoader();
   objLoader2.setMaterials(mtl2);
 
-  objLoader2.load("Avent_sport.obj", (obj2) => {
+  objLoader2.load("./Avent_sport.obj", (obj2) => {
     const model2 = obj2;
     scene.add(model2);
 
@@ -179,7 +179,7 @@ scene.add(cube6);
 
 //add grass texture to floor
 const textureLoaderbrick = new TextureLoader();
-const brickTexture = textureLoaderbrick.load("brick.jpg");
+const brickTexture = textureLoaderbrick.load("./brick.jpg");
 cube.material.map = brickTexture;
 cube2.material.map = brickTexture;
 cube3.material.map = brickTexture;
@@ -187,7 +187,7 @@ cube4.material.map = brickTexture;
 cube5.material.map = brickTexture;
 
 const textureLoaderdoor = new TextureLoader();
-const doorTexture = textureLoaderdoor.load("door.jpg");
+const doorTexture = textureLoaderdoor.load("./door.jpg");
 cube6.material.map = doorTexture;
 
 //animate cube 6 to open like a door
@@ -222,7 +222,7 @@ pyramid.rotation.y = Math.PI / 4;
 pyramid2.rotation.y = Math.PI / 4;
 
 const textureLoaderroof = new TextureLoader();
-const roofTexture = textureLoaderroof.load("roof.avif");
+const roofTexture = textureLoaderroof.load("./roof.avif");
 pyramid.material.map = roofTexture;
 pyramid2.material.map = roofTexture;
 roofTexture.repeat.set(4, 1);
@@ -236,7 +236,7 @@ pic.position.z = -1.95;
 scene.add(pic);
 
 const textureLoaderpic = new TextureLoader();
-const picTexture = textureLoaderpic.load("pic.jpg");
+const picTexture = textureLoaderpic.load("./pic.jpg");
 pic.material.map = picTexture;
 
 //add directional light
